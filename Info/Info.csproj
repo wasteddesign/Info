@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{2837EBA5-2F9A-4192-A2E7-95D41F6C478F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Info</RootNamespace>
+    <AssemblyName>Info.NET</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\ot\AppData\Roaming\ICSharpCode/SharpDevelop4\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <RunSourceAnalysis>False</RunSourceAnalysis>
+    <StartArguments>/nocr</StartArguments>
+    <StartWorkingDirectory>c:\buzz</StartWorkingDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <StartAction>Program</StartAction>
+    <StartProgram>c:\buzz\buzz.exe</StartProgram>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants />
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BuzzGUI.Common">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Jeskola\Buzz\BuzzGUI.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="BuzzGUI.Interfaces">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Jeskola\Buzz\BuzzGUI.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorPicker\ColorDialog.xaml.cs">
+      <DependentUpon>ColorDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ColorPicker\ColorPicker.xaml.cs">
+      <DependentUpon>ColorPicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomInfoWindow.cs" />
+    <Compile Include="Info.cs" />
+    <Compile Include="InfoSettings.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="RTFBox\FontHeight.cs" />
+    <Compile Include="RTFBox\FontList.cs" />
+    <Compile Include="RTFBox\RTFBoxInfo.xaml.cs">
+      <DependentUpon>RTFBoxInfo.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ColorPicker\Images\ColorSwatchCircle.png" />
+    <Resource Include="ColorPicker\Images\ColorSwatchSquare.png" />
+    <Resource Include="ColorPicker\Images\ColorSwatchSquare2.png" />
+    <Resource Include="RTFBox\Images\AlignCenter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\AlignLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\AlignRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Backcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Bold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\BulletList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Indent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\IndentRemove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Italic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\NumbersList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Strikeout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Subscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Superscript.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Textcolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Underline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ColorPicker\ColorDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="ColorPicker\ColorPicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+    </Page>
+    <Page Include="RTFBox\RTFBoxInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="RTFBox\Images\Spellcheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+  <PropertyGroup>
+    <PostBuildEvent>powershell -Command "Start-Process cmd -ArgumentList('/C', 'COPY /Y \"$(SolutionDir)Info\bin\*\" \"C:\Program Files (x86)\Jeskola\Buzz\Gear\Generators\"')"  -Verb RunAs
+powershell -Command "Start-Process cmd -ArgumentList('/C', 'COPY /Y \"$(SolutionDir)Info\bin\*\" \"C:\Program Files\Jeskola\Buzz\Gear\Generators\"')"  -Verb RunAs</PostBuildEvent>
+  </PropertyGroup>
+</Project>
